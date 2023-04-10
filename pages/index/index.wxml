@@ -1,0 +1,58 @@
+<!-- 小程序中循环数组的写法如下：循环默认每一项叫item，每一项的下表是index -->
+<!-- 给循环数据绑定事件 bindtap  data-item data-index -->
+<!-- 动态绑定类名 class='{{类名}}' -->
+<!-- <view 
+  wx:for="{{ arr }}" 
+  wx:key="index" 
+  bindtap="clickItem" 
+  data-item="{{ item }}" 
+  data-index="{{ index }}"
+  class="box {{ activeIndex === index ? 'active' : ''}}"
+>
+  {{ item.name }} --- {{ item.price }}元 ---- {{ index }}
+</view> -->
+<!-- 如果是双层循环，那么写法如下： -->
+<!-- <view wx:for="{{ arr }}" wx:key="index" wx:for-item="item2" wx:for-index="i">
+  {{ item2.name }} **** {{ item2.price}} **** {{ i }}
+</view> -->
+
+<!-- 子组件 且父给子组件传递参数，以及接收来自子组件的数据 -->
+<!-- <view>
+  <view>
+    <child name="{{ name}}" num="{{ num }}" bindsend="getSend"></child>
+    <text>子传父的数据：{{ msg }}</text>
+  </view>
+</view>
+<button bindtap="toDetail">
+跳转到详情页
+</button> -->
+<!-- <view class="btn">
+  <button>加载更多……</button>
+</view> -->
+<!-- 轮播图 -->
+<swiper indicator-dots indicator-color="orange" indicator-active-color="gray" autoplay interval="2000" circular>
+  <swiper-item wx:for="{{ swiperList }}" wx:key="id">
+    <image src="{{item.image}}"/>
+  </swiper-item>
+</swiper>
+<!-- 九宫格 -->
+<view class="grid-list">
+  <view class="grid-item" wx:for="{{ gridList }}" wx:key="id">
+    <image src="{{ item.icon }}"/>
+    <text>{{ item.name }}</text>
+  </view>
+</view>
+<!-- 图片区域 -->
+ <view class="img-box">
+   <image src="/images/image001.webp" mode="widthFix"/>
+   <image src="/images/image002.webp" mode="widthFix"/>
+ </view>
+ <!-- 声明式导航跳转到tabBar页面： 必须使用open-type=“switchTab”，并且必须是绝对路径-->
+ <navigator url="/pages/message/message" open-type="switchTab">导航到消息页面</navigator>
+ <!-- 声明式导航跳转非tabBar页面： 必须使用open-type=“navigate“ 或者省略掉不写，简写如下：-->
+ <navigator url="/pages/info/info?name=zs&age=20">跳转到Info页面</navigator>
+ <!-- 编程式导航跳转tabBar页面 -->
+ <button bindtap="gotoMessage">编程式-跳转消息页面</button>
+ <!-- 编程式导航跳转非tabBar页面 -->
+ <button bindtap="gotoInfo">编程式-跳转Info页面（非tabBar）</button>
+ <view class="box"></view>

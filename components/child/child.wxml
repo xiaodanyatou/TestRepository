@@ -1,0 +1,7 @@
+<!--components/child/child.wxml-->
+<view>
+  父-传递过来的数据---{{ name }}---{{ num }}
+</view>
+<button bindtap="send">
+  传值给父组件
+</button>

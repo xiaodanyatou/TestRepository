@@ -1,0 +1,5 @@
+<!--pages/message/message.wxml-->
+<view>
+  count值是：{{ count }}
+  <button bindtap="addCount">+1</button>
+</view>

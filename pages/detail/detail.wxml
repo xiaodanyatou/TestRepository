@@ -1,0 +1,32 @@
+<!-- 轮播图 -->
+<swiper class="swiper-container" indicator-dots indicator-color="white" indicator-active-color="gray" autoplay interval="2000" circular>
+  <swiper-item>
+    <view class="item">A</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">B</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">C</view>
+  </swiper-item>
+</swiper>
+<view>
+  <!-- selectable支持长安选中 -->
+  <text selectable>18301402341</text>
+  <!-- rich-text nodes属性可以将html标签渲染为对应的ui结构 -->
+  <rich-text nodes="<h1 style='color:red;'>标题</h1>"/>
+</view>
+<view>
+  <button>普通按钮</button>
+  <button type="primary" bindtap="btnTap">主色调按钮</button>
+  <button type="primary" size="mini" bindtap="changeCount">+1</button>
+  <!-- 事件传参：data-info info就是参数名字，数值2会被解析为参数的值  {{2}}代表传数字的写法， 直接写2 是表示传字符串-->
+  <button type="primary" size="mini" plain bindtap="btnHandler" data-info="{{2}}">传参按钮</button>
+  <!-- image mode值有五种 -->
+  <image src="" mode="aspectFill"/>
+</view>
+<view>
+输入框：
+  <input style="border: 1px solid red;" value="{{username}}" type="text" placeholder='输入真实的姓名' bindinput="inputFun"></input>
+</view>
+

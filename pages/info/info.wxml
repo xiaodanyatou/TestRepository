@@ -1,0 +1,5 @@
+<!--pages/info/info.wxml-->
+<!-- 声明式导航后退导航: delta="数字" 后退的层级数，如果只是后退到一层，可以省略，简写如下： -->
+<navigator open-type="navigateBack">返回上一页</navigator>
+<!-- 编程式导航实现后导航： -->
+<button bindtap="gotoback">（编程式）后退</button>
