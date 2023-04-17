@@ -2,7 +2,6 @@
 
 <view class="van-collapse-item custom-class {{ index !== 0 ? 'van-hairline--top' : '' }}">
   <van-cell
-    size="{{ size }}"
     title="{{ title }}"
     title-class="title-class"
     icon="{{ icon }}"
@@ -32,9 +31,9 @@
     />
   </van-cell>
   <view
-    class="{{ utils.bem('collapse-item__wrapper') }}"
-    style="height: 0;"
-    animation="{{ animation }}"
+    class="{{ utils.bem('collapse-item__wrapper', { transition }) }}"
+    style="height: {{ contentHeight }};"
+    bind:transitionend="onTransitionEnd"
   >
     <view
       class="van-collapse-item__content content-class"

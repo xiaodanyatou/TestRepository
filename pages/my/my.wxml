@@ -1,2 +1,4 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view wx:for="{{colorList}}" wx:key="index" class="num-item" style="background-color: rgba({{item}});">
+  {{ item}}
+</view>

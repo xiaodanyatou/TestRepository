@@ -66,6 +66,14 @@ Page({
     this.getSwiperList()
     this.getGridList()
   },
+  async getInfo(){
+    const {data: res} = await wx.p.request({ // {data: res} 解构赋值
+      method: 'GET',
+      url: 'https://escook.cn/api/get',
+      data: { name: 'zs', age: 20 }
+    })
+    console.log(res)
+  },
   // 获取轮播图数据
   getSwiperList () {
     wx.request({

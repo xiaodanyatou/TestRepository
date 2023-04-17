@@ -7,4 +7,10 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+/* css变量 页面的根结点就是page */
+page {
+  /* 定制警告按钮的背景颜色和边框颜色 */
+  --button-danger-background-color: lightblue;
+  --button-danger-border-color: purple;
+}

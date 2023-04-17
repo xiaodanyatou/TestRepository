@@ -37,10 +37,10 @@
 </swiper>
 <!-- 九宫格 -->
 <view class="grid-list">
-  <view class="grid-item" wx:for="{{ gridList }}" wx:key="id">
+  <navigator class="grid-item" wx:for="{{ gridList }}" wx:key="id" url="/pages/shoplist/shoplist?id={{item.id}}&title={{item.name}}">
     <image src="{{ item.icon }}"/>
     <text>{{ item.name }}</text>
-  </view>
+  </navigator>
 </view>
 <!-- 图片区域 -->
  <view class="img-box">
@@ -55,4 +55,15 @@
  <button bindtap="gotoMessage">编程式-跳转消息页面</button>
  <!-- 编程式导航跳转非tabBar页面 -->
  <button bindtap="gotoInfo">编程式-跳转Info页面（非tabBar）</button>
- <view class="box"></view>
+<view>
+<!-- max属性：控制自增的最大值  -->
+  <my-test max="9"></my-test>
+</view>
+
+<view>
+  --------------分割线-------------------
+</view>
+<my-test2></my-test2>
+<van-button type="primary" bindtap="getInfo">按钮</van-button>
+<van-button type="danger">按钮</van-button>
+ 

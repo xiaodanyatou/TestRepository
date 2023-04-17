@@ -1,0 +1,12 @@
+// WXS只能与Mustache语法（即{{}}）配合使用，不能作为组件的事件回调函数。bindtap="m2.toLower"写法是错误的
+function splitPhone (str) {
+  if (str.length != 11) return str
+  var arr = str.split('')
+  arr.splice(3,0,'-')
+  arr.splice(8,0,'-')
+  return arr.join('')
+}
+
+module.exports = {
+  splitPhone: splitPhone
+}

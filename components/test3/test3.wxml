@@ -1,0 +1,17 @@
+<!--components/test3/test3.wxml-->
+<text>我是子组件test3中接收到的count值：{{count}}</text>
+<button bindtap="addCount" type="primary">+1</button>
+<view>------fengexian--------</view>
+<view class="colorBox" style="background-color: rgb({{ fullColor }});">
+  颜色值是：{{ fullColor }}
+</view>
+<button size="mini" bindtap="changeR">R</button>
+<button size="mini" bindtap="changeG">G</button>
+<button size="mini" bindtap="changeB">B</button>
+
+<view>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</view>
+<!-- behavior使用 组件内共享 -->
+<view>
+  在behavior中定义的用户名：{{username}}
+</view>
+<view>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</view>
